@@ -26,6 +26,7 @@ var PH = PH || {};
         return { "book": group[bookIndex], "chapter": index };
     };
     PH.getReadingPlan = function(date) {
+        date.setHours(0,0,0,0); // set to midnight
         index = Math.floor(date / 86400000) % PH.lcm;
         var indexes = totalLengths.map(function(length) { return index > length ? index % length || 1 : index; });
         var books = _.map(indexes, function(index, i) { return bookAndChapter(index, plan[i]); });
