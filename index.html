@@ -3,25 +3,25 @@
   <head>
     <title>Read the Word!</title>
     <meta name="viewport" content="width=device-width">
-    <link href='http://fonts.googleapis.com/css?family=Alegreya:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
     <style type="text/css">
       body { font-size: 24px; }
       ul { list-style-type: none; padding: 0; margin: 0; padding: 2rem }
-      li { font-family: 'Alegreya', serif; }
+      li { font-family: 'Roboto Condensed', serif; }
       a { text-decoration: none; }
       a:hover { border-bottom: solid 3px; }
       a:visited { text-decoration: line-through; }
-      .book { display: inline-block; width: 13rem; }
-      .color-0 { color: #c0392b; }
-      .color-1 { color: #d35400; }
-      .color-2 { color: #f39c12; }
-      .color-3 { color: #27ae60; }
-      .color-4 { color: #16a085; }
-      .color-5 { color: #2980b9; }
-      .color-6 { color: #8e44ad; }
-      .color-7 { color: #bdc3c7; }
-      .color-8 { color: #7f8c8d; }
-      .color-9 { color: #2c3e50; }
+      .book { display: inline-block; width: 12rem; }
+      .color-0 { color: #111625; }
+      .color-1 { color: #341931; }
+      .color-2 { color: #571B3C; }
+      .color-3 { color: #111625; }
+      .color-4 { color: #341931; }
+      .color-5 { color: #571B3C; }
+      .color-6 { color: #111625; }
+      .color-7 { color: #341931; }
+      .color-8 { color: #571B3C; }
+      .color-9 { color: #7A1E48; }
     </style>
   </head>
   <body>
@@ -36,7 +36,7 @@
         render: function() {
           var readings = this.props.data.map(function(reading, i) {
             return (
-              <Reading key={reading.book} reading={reading} index={i} />
+              <Reading key={reading.id} reading={reading} index={i} />
             );
           });
           return (
